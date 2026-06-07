@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Sugam | Geomatics Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="TO3.css"/>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Sugam <span>Dhungana</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="">Home</a>
+      <a href="about.html" class="">About</a>
+      <a href="skills.html" class="">Skills</a>
+      <a href="education.html" class="">Education</a>
+      <a href="projects.html" class="">Projects</a>
+      <a href="webgis.html" class="">WebGIS</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Get in Touch</a>
+  </nav>
+
+  <div class="page-banner">
+    <div class="page-banner-label">06 / Contact</div>
+    <h1>Get in Touch</h1>
+    <p>Open to internships, collaboration, and project discussions. Drop me a message.</p>
+  </div>
+
+  <div class="page-content">
+    <div class="container">
+
+      <div class="contact-grid">
+
+        <!-- Left: info -->
+        <div>
+          <h2 class="contact-info-title">Let&rsquo;s Work Together</h2>
+          <p class="contact-info-text">Whether you have a GIS project, a mapping challenge, or just want to talk spatial data &mdash; I am always happy to connect. I am currently based in Kathmandu and open to internships and part-time remote opportunities.</p>
+
+          <div class="contact-info-items">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&#9993;</div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <div class="contact-info-value"><a href="mailto:sd03235722@student.ku.edu.np" style="color:inherit">sd03235722@student.ku.edu.np</a></div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&#128241;</div>
+              <div>
+                <div class="contact-info-label">Phone</div>
+                <div class="contact-info-value">+977-9840030575</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&#9678;</div>
+              <div>
+                <div class="contact-info-label">Location</div>
+                <div class="contact-info-value">Kathmandu, Bagmati Province, Nepal</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&#127979;</div>
+              <div>
+                <div class="contact-info-label">University</div>
+                <div class="contact-info-value">Kathmandu University, Dhulikhel</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-label" style="margin-bottom:.8rem">Find me on</div>
+          <div class="social-links">
+            <a href="https://github.com/maestro1911" class="social-link">&#9651; GitHub</a>
+            <a href="https://www.linkedin.com/in/sugam-dhungana" class="social-link">&#128101; LinkedIn</a>
+            <a href="https://www.researchgate.net/profile/Sugam-Dhungana" class="social-link">&#127760; ResearchGate</a>
+          </div>
+
+          <!-- Mini static map placeholder -->
+          <div style="margin-top:2rem;border:1px solid var(--border);border-radius:3px;overflow:hidden">
+            <img src="skd.jpeg"
+                 alt="Location map placeholder"
+                 style="width:100%;display:block;object-fit:cover;filter:sepia(20%) saturate(80%)"/>
+            <div style="padding:.6rem 1rem;background:var(--bg-2);font-size:.72rem;color:var(--tx-3);font-family:var(--ff-m)">
+              &#9650; Kathmandu, Nepal &middot; 27.7172&deg; N, 85.3240&deg; E
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-wrap">
+          <div class="section-label" style="margin-bottom:1rem">Send a Message</div>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" class="form-input" placeholder="Your first name" required/>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" class="form-input" placeholder="Your last name"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-input" placeholder="your@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-input" placeholder="e.g. GIS Project Collaboration"/>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-input" rows="6"
+                placeholder="Describe your project or query here..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">&#10003;&nbsp; Send Message</button>
+            <p id="form-msg" style="margin-top:.8rem;font-size:.82rem;color:var(--sage);display:none">
+              &#10003; Message sent! I will get back to you soon.
+            </p>
+          </form>
+        </div>
+
+      </div><!-- .contact-grid -->
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Sugam <span>Dhungana</span></div>
+          <p class="footer-brand-desc">Geomatics Engineering student at Kathmandu University. Passionate about spatial data, cartography, and web GIS solutions for Nepal.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Pages</div>
+          <ul class="footer-col-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="education.html">Education</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Work</div>
+          <ul class="footer-col-links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="webgis.html">WebGIS Demo</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-col-links">
+            <li><a href="mailto:sd03235722@student.ku.edu.np">sd03235722@student.ku.edu.np</a></li>
+            <li><a href="https://github.com/maestro1911" target="_blank">github.com/maestro1911</a></li>
+            <li><a href="https://maps.google.com/?q=Kathmandu,+Nepal" target="_blank">Kathmandu, Nepal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2025 Sugam Dhungana &middot; Kathmandu University</span>
+        <span class="footer-files">TO3.css &middot; TO3.js &middot; TO3.geojson</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-msg').style.display = 'block';
+    e.target.reset();
+    setTimeout(function(){ document.getElementById('form-msg').style.display='none'; }, 5000);
+  }
+  </script>
+</body>
+</html>
