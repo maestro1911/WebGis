@@ -3,105 +3,154 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Education — Sugam | Geomatics Portfolio</title>
+  <title>Education — Sugam K. Dhungana | Geomatics Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="TO3.css"/>
+  
 </head>
 <body>
   <nav class="nav">
-    <a href="index.html" class="nav-logo">Sugam <span>Dhungana</span></a>
+    <a href="index.html" class="nav-logo">Sugam <span>K. Dhungana</span></a>
     <div class="nav-links">
-      <a href="index.html" class="">Home</a>
-      <a href="about.html" class="">About</a>
-      <a href="skills.html" class="">Skills</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
       <a href="education.html" class="active">Education</a>
-      <a href="projects.html" class="">Projects</a>
-      <a href="webgis.html" class="">WebGIS</a>
-      <a href="contact.html" class="">Contact</a>
+      <a href="projects.html">Projects</a>
+      <a href="webgis.html">WebGIS</a>
+      <a href="contact.html">Contact</a>
     </div>
     <a href="contact.html" class="nav-cta">Get in Touch</a>
   </nav>
 
   <div class="page-banner">
-    <div class="page-banner-label">03 / Education</div>
+    <div class="page-banner-label">03 &middot; Education</div>
     <h1>Academic Journey</h1>
-    <p>From the disciplined halls of Sainik Awasiya to the survey fields of Kathmandu University.</p>
+    <p>From Sainik Awasiya&rsquo;s disciplined halls in Bhaktapur to the survey fields of Kathmandu University.</p>
   </div>
 
   <div class="page-content">
     <div class="container">
 
-      <!-- Education timeline -->
       <div class="section">
-        <div class="section-label">Qualifications</div>
-        <h2 class="section-title">Education Timeline</h2>
+        <div class="section-label">Timeline</div>
+        <h2 class="section-title">Education History</h2>
 
         <div class="edu-timeline" style="margin-top:3rem">
 
+          <!-- ① KU -->
           <div class="edu-item">
             <div class="edu-badge degree">BE</div>
             <div>
-              <div class="edu-period mono">2022 &mdash; Present</div>
-              <div class="edu-school">Kathmandu University, School of Engineering &middot; Dhulikhel</div>
-              <div class="edu-degree">Bachelor of Engineering — Geomatics</div>
-              <p class="edu-desc">Four-year programme covering the full spectrum of geomatics: Geodesy, Photogrammetry, Remote Sensing, Land Administration, GIS, Spatial Database Management, and WebGIS development. Conducting regular field surveys, map production, and spatial analysis projects.</p>
+              <div class="edu-period mono">2022 &mdash; Present (7th Semester)</div>
+              <div class="edu-school">
+                <i class="fas fa-university"></i>
+                Kathmandu University, School of Engineering &middot; Dhulikhel, Kavrepalanchok
+              </div>
+              <div class="edu-degree">Bachelor of Engineering &mdash; Geomatics Engineering</div>
+              <p class="edu-desc">A four-year programme covering Geodesy, Photogrammetry, Remote Sensing, GIS, Land Administration, Spatial Database Management, and WebGIS development. Conducting regular field surveys, thematic map production, and spatial analysis projects. Currently in the 7th semester with strong focus on GIS application and web mapping.</p>
               <div class="edu-tags">
                 <span class="edu-tag">Geodesy</span><span class="edu-tag">Photogrammetry</span>
-                <span class="edu-tag">Remote Sensing</span><span class="edu-tag">GIS</span>
-                <span class="edu-tag">WebGIS</span><span class="edu-tag">Land Administration</span>
-                <span class="edu-tag">Satellite Geodesy</span><span class="edu-tag">Spatial Database</span>
+                <span class="edu-tag">Remote Sensing</span><span class="edu-tag">GIS &amp; WebGIS</span>
+                <span class="edu-tag">Land Administration</span><span class="edu-tag">Satellite Geodesy</span>
+                <span class="edu-tag">Spatial Database</span><span class="edu-tag">Digital Cartography</span>
+              </div>
+
+              <!-- 📷 KU PHOTOS (2 side-by-side)
+                   Replace 'ku-campus.jpg' with a photo of KU campus or your department
+                   Replace 'ku-fieldwork.jpg' with a photo of you doing fieldwork
+                   Both: 600 × 380 px, landscape, JPG -->
+              <div class="edu-photo-strip" style="margin-top:1.5rem">
+                <div class="photo-frame">
+                  <img src="ku.png" alt="Kathmandu University Campus"
+                       onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-university\'></i><span>Replace with<br/>ku-campus.jpg</span></div>'"/>
+                  <div class="photo-caption"><i class="fas fa-university"></i> KU Campus, Dhulikhel</div>
+                </div>
+                <div class="photo-frame">
+                  <img src="ku1.jpeg" alt="Field Survey at KU"
+                       onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-map-pin\'></i><span>Replace with<br/>ku-fieldwork.jpg</span></div>'"/>
+                  <div class="photo-caption"><i class="fas fa-map-pin"></i> Field Survey Practice</div>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- ② +2 Science (Sainik Awasiya) -->
           <div class="edu-item">
             <div class="edu-badge school">+2</div>
             <div>
               <div class="edu-period mono">2020 &mdash; 2022</div>
-              <div class="edu-school">Sainik Awasiya Mahavidyalaya &middot; Sallaghari, Bhaktapur</div>
-              <div class="edu-degree">Higher Secondary Certificate (+2) — Science (PCM)</div>
-              <p class="edu-desc">Completed the NEB Higher Secondary Certificate in the Science stream with Physics, Chemistry, Mathematics and Computer Science. The structured and disciplined environment of Sainik Awasiya shaped strong study habits, teamwork, and leadership qualities that continue to influence my academic life.</p>
+              <div class="edu-school">
+                <i class="fas fa-school"></i>
+                Sainik Awasiya Mahavidyalaya &middot; Sallaghari, Bhaktapur
+              </div>
+              <div class="edu-degree">Higher Secondary Certificate (+2) &mdash; Science (PCM)</div>
+              <p class="edu-desc">Completed the NEB Higher Secondary Certificate in the Science stream with Physics, Chemistry, Mathematics, and Computer Science. Sainik Awasiya&rsquo;s structured residential environment built discipline, teamwork, and strong foundations in analytical thinking that continue to shape my academic approach.</p>
               <div class="edu-tags">
                 <span class="edu-tag">Physics</span><span class="edu-tag">Chemistry</span>
                 <span class="edu-tag">Mathematics</span><span class="edu-tag">Computer Science</span>
-                <span class="edu-tag">NEB Board</span>
+                <span class="edu-tag">NEB Board</span><span class="edu-tag">Sainik Awasiya</span>
+              </div>
+
+              <!-- 📷 SCHOOL PHOTO
+                   Replace 'school-sainik.jpg' with a photo of your school or a group/class photo
+                   Recommended: 800 × 400 px, landscape, JPG -->
+              <div style="margin-top:1.2rem;max-width:480px">
+                <div class="photo-frame">
+                  <img src="sainik.jpeg" alt="Sainik Awasiya Mahavidyalaya"
+                       onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-school\'></i><span>Replace with school-sainik.jpg<br/>(Your school / class photo)</span></div>'"/>
+                  <div class="photo-caption"><i class="fas fa-school"></i> Sainik Awasiya Mahavidyalaya, Sallaghari, Bhaktapur</div>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- ③ SEE (Sainik Awasiya) -->
           <div class="edu-item">
             <div class="edu-badge school">SEE</div>
             <div>
               <div class="edu-period mono">&mdash; 2020</div>
-              <div class="edu-school">Sainik Awasiya Mahavidyalaya &middot; Sallaghari, Bhaktapur</div>
+              <div class="edu-school">
+                <i class="fas fa-school"></i>
+                Sainik Awasiya Mahavidyalaya &middot; Sallaghari, Bhaktapur
+              </div>
               <div class="edu-degree">Secondary Education Examination (SEE)</div>
-              <p class="edu-desc">Completed the NEB Secondary Education Examination from Sainik Awasiya Mahavidyalaya, building a strong foundation in science and mathematics that paved the way for engineering studies.</p>
+              <p class="edu-desc">Completed the NEB Secondary Education Examination from Sainik Awasiya Mahavidyalaya, Sallaghari, Bhaktapur, building a strong foundation in science and mathematics that paved the way for engineering studies.</p>
               <div class="edu-tags">
                 <span class="edu-tag">NEB Board</span><span class="edu-tag">Science Stream</span>
+                <span class="edu-tag">Sainik Awasiya Mahavidyalaya</span>
               </div>
+                <div style="margin-top:1.2rem;max-width:480px">
+                <div class="photo-frame">
+                  <img src="sainik.jpeg" alt="Sainik Awasiya Mahavidyalaya"
+                       onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-school\'></i><span>Replace with school-sainik.jpg<br/>(Your school / class photo)</span></div>'"/>
+                  <div class="photo-caption"><i class="fas fa-school"></i> Sainik Awasiya Mahavidyalaya, Sallaghari, Bhaktapur</div>
+                </div>
+
             </div>
           </div>
 
-        </div>
+        </div><!-- .edu-timeline -->
       </div>
 
       <hr class="divider"/>
 
-      <!-- Key courses -->
+      <!-- Key courses at KU -->
       <div class="section">
         <div class="section-label">At KU</div>
         <h2 class="section-title">Relevant Coursework</h2>
-        <div class="softskills-grid" style="margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
-          <div class="softskill-item"><div class="softskill-icon">🗺</div><div class="softskill-name">Digital Cartography</div><div class="softskill-desc">Map design, projections, symbology and spatial layout.</div></div>
-          <div class="softskill-item"><div class="softskill-icon">🛰</div><div class="softskill-name">Remote Sensing</div><div class="softskill-desc">Satellite image processing and land cover classification.</div></div>
-          <div class="softskill-item"><div class="softskill-icon">🌐</div><div class="softskill-name">WebGIS</div><div class="softskill-desc">Leaflet, GeoServer, WMS/WFS and web mapping frameworks.</div></div>
-          <div class="softskill-item"><div class="softskill-icon">📡</div><div class="softskill-name">Satellite Geodesy</div><div class="softskill-desc">GNSS surveying, GPS processing and coordinate systems.</div></div>
-          <div class="softskill-item"><div class="softskill-icon">🏙</div><div class="softskill-name">Land Administration</div><div class="softskill-desc">Cadastral mapping, land registration and policy.</div></div>
-          <div class="softskill-item"><div class="softskill-icon">🗄</div><div class="softskill-name">Spatial Databases</div><div class="softskill-desc">PostgreSQL/PostGIS, spatial SQL and data modelling.</div></div>
-          <div class="softskill-item"><div class="softskill-icon">📐</div><div class="softskill-name">Engineering Survey</div><div class="softskill-desc">Total station, theodolite, levelling and traverse.</div></div>
-          <div class="softskill-item"><div class="softskill-icon">✈</div><div class="softskill-name">Photogrammetry</div><div class="softskill-desc">Aerial imagery, DEM generation and orthophotos.</div></div>
+        <div class="softskills-grid" style="margin-top:1.8rem;grid-template-columns:repeat(auto-fill,minmax(175px,1fr))">
+          <div class="softskill-card"><div class="ss-icon">&#128506;</div><div class="ss-name">Digital Cartography</div><div class="ss-desc">Map design, projections, symbology and spatial layout.</div></div>
+          <div class="softskill-card"><div class="ss-icon">&#128752;</div><div class="ss-name">Remote Sensing</div><div class="ss-desc">Satellite image processing and land cover classification.</div></div>
+          <div class="softskill-card"><div class="ss-icon">&#127758;</div><div class="ss-name">WebGIS</div><div class="ss-desc">Leaflet.js, GeoServer, WMS/WFS and web mapping.</div></div>
+          <div class="softskill-card"><div class="ss-icon">&#128225;</div><div class="ss-name">Satellite Geodesy</div><div class="ss-desc">GNSS surveying, GPS processing and coordinate systems.</div></div>
+          <div class="softskill-card"><div class="ss-icon">&#127968;</div><div class="ss-name">Land Administration</div><div class="ss-desc">Cadastral mapping, land registration and policy.</div></div>
+          <div class="softskill-card"><div class="ss-icon">&#128451;</div><div class="ss-name">Spatial Databases</div><div class="ss-desc">PostgreSQL/PostGIS, spatial SQL and data modelling.</div></div>
+          <div class="softskill-card"><div class="ss-icon">&#128207;</div><div class="ss-name">Engineering Survey</div><div class="ss-desc">Total station, theodolite, levelling and traversing.</div></div>
+          <div class="softskill-card"><div class="ss-icon">&#9992;</div><div class="ss-name">Photogrammetry</div><div class="ss-desc">Aerial imagery, DEM generation and orthophotos.</div></div>
         </div>
       </div>
 
@@ -110,45 +159,14 @@
       <!-- Certifications -->
       <div class="section section-last">
         <div class="section-label">Extra Learning</div>
-        <h2 class="section-title">Certifications &amp; Courses</h2>
-        <p class="section-sub" style="margin-bottom:2rem">Online courses and workshops completed alongside university study.</p>
-        <div class="cert-grid">
-          <div class="cert-card">
-            <div class="cert-card-icon">🌍</div>
-            <div class="cert-card-name">Google Earth Engine Fundamentals</div>
-            <div class="cert-card-org">Google / EarthEngine Community</div>
-            <div class="cert-card-year mono">2024</div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-card-icon">🗺</div>
-            <div class="cert-card-name">QGIS Advanced Workflows</div>
-            <div class="cert-card-org">QGIS.org Community Course</div>
-            <div class="cert-card-year mono">2023</div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-card-icon">🐍</div>
-            <div class="cert-card-name">Python for GIS &amp; Spatial Analysis</div>
-            <div class="cert-card-org">Udemy / Independent</div>
-            <div class="cert-card-year mono">2023</div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-card-icon">🛰</div>
-            <div class="cert-card-name">Remote Sensing with Sentinel Data</div>
-            <div class="cert-card-org">ESA EO College</div>
-            <div class="cert-card-year mono">2024</div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-card-icon">🌐</div>
-            <div class="cert-card-name">Web Mapping with Leaflet.js</div>
-            <div class="cert-card-org">Self-directed / MDN &amp; Docs</div>
-            <div class="cert-card-year mono">2025</div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-card-icon">🗄</div>
-            <div class="cert-card-name">PostgreSQL &amp; PostGIS Spatial</div>
-            <div class="cert-card-org">PostgreSQL Tutorial / pgAdmin</div>
-            <div class="cert-card-year mono">2023</div>
-          </div>
+        <h2 class="section-title">Certifications &amp; Short Courses</h2>
+        <div class="cert-grid" style="margin-top:1.5rem">
+          <div class="cert-card"><div class="cert-icon">&#127758;</div><div class="cert-name">Google Earth Engine Fundamentals</div><div class="cert-org">Google / EarthEngine Community</div><div class="cert-year mono">2024</div></div>
+          <div class="cert-card"><div class="cert-icon">&#128506;</div><div class="cert-name">QGIS Advanced Workflows</div><div class="cert-org">QGIS.org Community Course</div><div class="cert-year mono">2023</div></div>
+          <div class="cert-card"><div class="cert-icon"><i class="fab fa-python"></i></div><div class="cert-name">Python for GIS &amp; Spatial Analysis</div><div class="cert-org">Udemy / Independent</div><div class="cert-year mono">2023</div></div>
+          <div class="cert-card"><div class="cert-icon">&#128752;</div><div class="cert-name">Remote Sensing with Sentinel Data</div><div class="cert-org">ESA EO College</div><div class="cert-year mono">2024</div></div>
+          <div class="cert-card"><div class="cert-icon">&#127757;</div><div class="cert-name">Web Mapping with Leaflet.js</div><div class="cert-org">Self-directed / MDN Docs</div><div class="cert-year mono">2025</div></div>
+          <div class="cert-card"><div class="cert-icon">&#128451;</div><div class="cert-name">PostgreSQL &amp; PostGIS Spatial</div><div class="cert-org">PostgreSQL Tutorial</div><div class="cert-year mono">2023</div></div>
         </div>
       </div>
 
@@ -159,37 +177,45 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand-name">Sugam <span>[Surname]</span></div>
-          <p class="footer-brand-desc">Geomatics Engineering student at Kathmandu University. Passionate about spatial data, cartography, and web GIS solutions for Nepal.</p>
+          <div class="footer-brand-name">Sugam <span>K. Dhungana</span></div>
+          <p class="footer-brand-desc">Geomatics Engineering Student &middot; 7th Semester &middot; Kathmandu University &middot; Originally from Solukhumbu, Nepal.</p>
+          <div class="footer-social" style="margin-top:1rem">
+            <a href="#" class="footer-soc" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="footer-soc" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-soc" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-soc" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-soc" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+          </div>
         </div>
         <div>
-          <div class="footer-col-title">Pages</div>
+          <div class="footer-col-title">Navigate</div>
           <ul class="footer-col-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="education.html">Education</a></li>
+            <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-layer-group"></i> Skills</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
           </ul>
         </div>
         <div>
           <div class="footer-col-title">Work</div>
           <ul class="footer-col-links">
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="webgis.html">WebGIS Demo</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a></li>
+            <li><a href="webgis.html"><i class="fas fa-map"></i> WebGIS Demo</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
           </ul>
         </div>
         <div>
-          <div class="footer-col-title">Contact</div>
+          <div class="footer-col-title">Find Me</div>
           <ul class="footer-col-links">
-            <li><a href="mailto:sugam@ku.edu.np">sugam@ku.edu.np</a></li>
-            <li><a href="#">github.com/sugam</a></li>
-            <li><a href="#">Kathmandu, Nepal</a></li>
+            <li><a href="mailto:sugam.dhungana@student.ku.edu.np"><i class="fas fa-envelope"></i> Email</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</a></li>
+            <li><a href="#"><i class="fas fa-mountain"></i> From Solukhumbu</a></li>
+            <li><a href="https://ku.edu.np" target="_blank"><i class="fas fa-university"></i> KU Dhulikhel</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="footer-copy">&copy; 2025 Sugam Dhungana &middot; Kathmandu University</span>
+        <span class="footer-copy">&copy; 2025 Sugam K. Dhungana &middot; BE Geomatics, Kathmandu University</span>
         <span class="footer-files">TO3.css &middot; TO3.js &middot; TO3.geojson</span>
       </div>
     </div>

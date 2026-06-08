@@ -3,81 +3,130 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About — Sugam | Geomatics Portfolio</title>
+  <title>About Me — Sugam K. Dhungana | Geomatics Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="TO3.css"/>
+  
 </head>
 <body>
   <nav class="nav">
-    <a href="index.html" class="nav-logo">Sugam <span>Dhungana</span></a>
+    <a href="index.html" class="nav-logo">Sugam <span>K. Dhungana</span></a>
     <div class="nav-links">
-      <a href="index.html" class="">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
-      <a href="skills.html" class="">Skills</a>
-      <a href="education.html" class="">Education</a>
-      <a href="projects.html" class="">Projects</a>
-      <a href="webgis.html" class="">WebGIS</a>
-      <a href="contact.html" class="">Contact</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html">Projects</a>
+      <a href="webgis.html">WebGIS</a>
+      <a href="contact.html">Contact</a>
     </div>
     <a href="contact.html" class="nav-cta">Get in Touch</a>
   </nav>
 
   <div class="page-banner">
-    <div class="page-banner-label">01 / About Me</div>
+    <div class="page-banner-label">01 &middot; About Me</div>
     <h1>Who I Am</h1>
-    <p>A spatial thinker, map enthusiast, and engineering student from the heart of Nepal.</p>
+    <p>From the mountains of Solukhumbu to the survey fields of Dhulikhel — a spatial thinker in the making.</p>
   </div>
 
   <div class="page-content">
     <div class="container">
       <div class="about-grid">
 
-        <div>
-          <div class="about-photo">
-            <img src="skd1.jpeg" alt="Profile photo placeholder"/>
-            <div class="about-photo-caption mono">📍 Kathmandu, Nepal · 1,400 m ASL</div>
+        <!-- ── LEFT: Photo + links ── -->
+        <div class="about-photo-wrap">
+
+          <!-- 📷 PROFILE PHOTO
+               Replace 'profile-photo.jpg' with your actual photo
+               Recommended: head-and-shoulders portrait, 400×500 px, JPG
+               Example filename: profile-photo.jpg -->
+          <div class="photo-frame">
+            <img src="skd1.jpeg" alt="Sugam K. Dhungana"
+                 onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-user-circle\'></i><span>Replace with<br/>profile-photo.jpg</span></div>'"/>
+            <div class="photo-caption">
+              <i class="fas fa-map-marker-alt"></i>
+              Sugam K. Dhungana &middot; Kathmandu, Nepal
+            </div>
           </div>
-          <a href="#" class="btn-download" style="margin-top:1.2rem">
-            ↓ &nbsp;Download CV (PDF)
+
+          <!-- Social links -->
+          <div style="margin-top:1.2rem">
+            <div class="section-label" style="margin-bottom:.7rem">Connect</div>
+            <div class="social-row">
+              <a href="#" class="soc-btn github"    title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="soc-btn linkedin"  title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="soc-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="soc-btn facebook"  title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="soc-btn rgate"     title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+              <a href="mailto:sugam.dhungana@student.ku.edu.np" class="soc-btn email" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <!-- CV download -->
+          <a href="cv-sugam-dhungana.pdf" class="btn-dark" style="margin-top:1.2rem;display:inline-flex;width:100%;justify-content:center" download>
+            <i class="fas fa-download"></i> Download CV
           </a>
+          <!-- 📄 Replace 'cv-sugam-dhungana.pdf' with your actual CV file -->
         </div>
 
+        <!-- ── RIGHT: Bio ── -->
         <div>
           <div class="section-label">My Story</div>
-          <h2 class="section-title" style="margin-bottom:1.2rem">Sugam Dhungana</h2>
-          <div class="about-bio">
-            <p>I am a passionate Geomatics Engineering student at Kathmandu University with a deep fascination for how spatial data can tell stories about our world. Growing up in Bhaktapur — a UNESCO World Heritage city — gave me an early appreciation for the relationship between place, culture, and geography.</p>
-            <p>My academic journey began at Sainik Awasiya Mahavidyalaya, Sallaghari, where discipline and rigour shaped my approach to problem-solving. Now at KU, I focus on the intersection of traditional surveying, remote sensing, and modern web technologies to build tools that make geospatial data accessible to everyone.</p>
-            <p>Outside the lab, I enjoy hiking Nepal's mountain trails, competing in geography quiz events, and contributing to open-source GIS projects. I believe maps are one of the most powerful forms of communication — and I want to spend my career making better ones.</p>
+          <h2 class="section-title" style="margin-bottom:1.3rem">Sugam K. Dhungana</h2>
+
+          <div class="about-bio-text">
+            <p>I am a 7th-semester Geomatics Engineering student at Kathmandu University, Dhulikhel,
+               originally from <strong>Solukhumbu District</strong> &mdash; the legendary home of Sherpas and
+               Mount Everest in eastern Nepal. Growing up surrounded by the world&rsquo;s highest peaks
+               naturally drew me toward understanding how geography and terrain shape human life,
+               agriculture, and development.</p>
+            <p>My academic journey began at <strong>Sainik Awasiya Mahavidyalaya, Sallaghari, Bhaktapur</strong>,
+               where I completed both SEE and +2 Science (PCM). The structured, disciplined environment
+               of Sainik Awasiya built strong foundations in mathematics, science, leadership, and
+               teamwork that continue to shape how I approach every project.</p>
+            <p>In 2022, I joined Kathmandu University to pursue Geomatics Engineering &mdash; a discipline
+               that combines geodesy, remote sensing, GIS, photogrammetry, and web mapping. At KU
+               I have worked on land suitability modelling using GIS and AHP, thematic cartography,
+               GPS surveys, DEM-based terrain analysis, and this interactive WebGIS dashboard.</p>
+            <p>Beyond the lab and lecture hall, I enjoy <em>table tennis, cricket, trekking, writing articles,
+               cycling, chess, swimming,</em> and any form of outdoor adventure that takes me closer
+               to Nepal&rsquo;s incredible landscapes.</p>
           </div>
 
-          <div class="about-info-grid">
-            <div class="about-info-item"><div class="about-info-label">Full Name</div><div class="about-info-value">Sugam Dhungana</div></div>
-            <div class="about-info-item"><div class="about-info-label">Degree</div><div class="about-info-value">BE Geomatics Engineering</div></div>
-            <div class="about-info-item"><div class="about-info-label">University</div><div class="about-info-value">Kathmandu University, Dhulikhel</div></div>
-            <div class="about-info-item"><div class="about-info-label">Email</div><div class="about-info-value">sugam@ku.edu.np</div></div>
-            <div class="about-info-item"><div class="about-info-label">Location</div><div class="about-info-value">Kathmandu, Nepal</div></div>
-            <div class="about-info-item"><div class="about-info-label">Languages</div><div class="about-info-value">Nepali · English · Hindi</div></div>
-            <div class="about-info-item"><div class="about-info-label">Nationality</div><div class="about-info-value">Nepali 🇳🇵</div></div>
-            <div class="about-info-item"><div class="about-info-label">Availability</div><div class="about-info-value">Open to internships</div></div>
+          <!-- Quick-facts grid -->
+          <div class="about-info-grid" style="margin-top:2rem">
+            <div class="aii"><div class="aii-label">Full Name</div><div class="aii-value">Sugam K. Dhungana</div></div>
+            <div class="aii"><div class="aii-label">Degree</div><div class="aii-value">BE Geomatics Engineering</div></div>
+            <div class="aii"><div class="aii-label">University</div><div class="aii-value">Kathmandu University, Dhulikhel</div></div>
+            <div class="aii"><div class="aii-label">Semester</div><div class="aii-value">7th Semester (2022 &ndash; Present)</div></div>
+            <div class="aii"><div class="aii-label">Origin</div><div class="aii-value">Solukhumbu District, Koshi Province</div></div>
+            <div class="aii"><div class="aii-label">Current City</div><div class="aii-value">Kathmandu, Bagmati Province</div></div>
+            <div class="aii"><div class="aii-label">Languages</div><div class="aii-value">Nepali &middot; English &middot; Hindi</div></div>
+            <div class="aii"><div class="aii-label">Availability</div><div class="aii-value">Open to Internships &amp; Projects</div></div>
           </div>
 
-          <div class="section-label" style="margin-top:2rem">Interests</div>
-          <div class="about-interests">
-            <span class="interest-tag">🏔 Mountain Hiking</span>
-            <span class="interest-tag">📸 Landscape Photography</span>
-            <span class="interest-tag">🌍 Open-Source GIS</span>
-            <span class="interest-tag">🧩 Geography Quizzes</span>
-            <span class="interest-tag">🗺 Cartographic Design</span>
-            <span class="interest-tag">🛰 Satellite Imagery</span>
-            <span class="interest-tag">📖 Geopolitics</span>
-            <span class="interest-tag">🌿 Sustainable Development</span>
+          <!-- Hobbies -->
+          <div style="margin-top:2rem">
+            <div class="section-label" style="margin-bottom:.75rem">Hobbies &amp; Interests</div>
+            <div class="hobby-grid">
+              <span class="hobby-tag"><i class="fas fa-table-tennis-paddle-ball"></i> Table Tennis</span>
+              <span class="hobby-tag"><i class="fas fa-cricket-bat-ball"></i> Cricket</span>
+              <span class="hobby-tag"><i class="fas fa-person-swimming"></i> Swimming</span>
+              <span class="hobby-tag"><i class="fas fa-chess"></i> Chess</span>
+              <span class="hobby-tag"><i class="fas fa-book-open"></i> Reading</span>
+              <span class="hobby-tag"><i class="fas fa-mountain-sun"></i> Trekking</span>
+              <span class="hobby-tag"><i class="fas fa-pen-nib"></i> Writing Articles</span>
+              <span class="hobby-tag"><i class="fas fa-person-biking"></i> Cycling</span>
+              <span class="hobby-tag"><i class="fas fa-compass"></i> Adventure</span>
+              <span class="hobby-tag"><i class="fas fa-users"></i> Interaction</span>
+            </div>
           </div>
         </div>
 
-      </div>
+      </div><!-- .about-grid -->
     </div>
   </div>
 
@@ -85,41 +134,48 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand-name">Sugam <span>Dhungana</span></div>
-          <p class="footer-brand-desc">Geomatics Engineering student at Kathmandu University. Passionate about spatial data, cartography, and building web GIS solutions for Nepal.</p>
+          <div class="footer-brand-name">Sugam <span>K. Dhungana</span></div>
+          <p class="footer-brand-desc">Geomatics Engineering Student &middot; 7th Semester &middot; Kathmandu University &middot; Originally from Solukhumbu, Nepal.</p>
+          <div class="footer-social" style="margin-top:1rem">
+            <a href="#" class="footer-soc" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="footer-soc" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-soc" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-soc" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-soc" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+          </div>
         </div>
         <div>
-          <div class="footer-col-title">Pages</div>
+          <div class="footer-col-title">Navigate</div>
           <ul class="footer-col-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="education.html">Education</a></li>
+            <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-layer-group"></i> Skills</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
           </ul>
         </div>
         <div>
           <div class="footer-col-title">Work</div>
           <ul class="footer-col-links">
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="webgis.html">WebGIS Demo</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a></li>
+            <li><a href="webgis.html"><i class="fas fa-map"></i> WebGIS Demo</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
           </ul>
         </div>
         <div>
-          <div class="footer-col-title">Contact</div>
+          <div class="footer-col-title">Find Me</div>
           <ul class="footer-col-links">
-            <li><a href="mailto:sd03235722@student.ku.edu.np">sd03235722@student.ku.edu.np</a></li>
-            <li><a href="#">github.com/sugam</a></li>
-            <li><a href="#">Kathmandu, Nepal</a></li>
+            <li><a href="mailto:sugam.dhungana@student.ku.edu.np"><i class="fas fa-envelope"></i> Email</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</a></li>
+            <li><a href="#"><i class="fas fa-mountain"></i> From Solukhumbu</a></li>
+            <li><a href="https://ku.edu.np" target="_blank" rel="noopener"><i class="fas fa-university"></i> KU Dhulikhel</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="footer-copy">&copy; 2025 Sugam Dhungana &middot; Kathmandu University</span>
+        <span class="footer-copy">&copy; 2025 Sugam K. Dhungana &middot; BE Geomatics, Kathmandu University</span>
         <span class="footer-files">TO3.css &middot; TO3.js &middot; TO3.geojson</span>
       </div>
     </div>
   </footer>
-  //sugam
 </body>
 </html>

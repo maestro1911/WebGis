@@ -3,113 +3,203 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WEB-GIS Project</title>
+  <title>Home — Sugam K. Dhungana | Geomatics Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="TO3.css"/>
+  
 </head>
 <body>
   <nav class="nav">
-    <a href="index.html" class="nav-logo">Sugam <span>Dhungana</span></a>
+    <a href="index.html" class="nav-logo">Sugam <span>K. Dhungana</span></a>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
-      <a href="about.html" class="">About</a>
-      <a href="skills.html" class="">Skills</a>
-      <a href="education.html" class="">Education</a>
-      <a href="projects.html" class="">Projects</a>
-      <a href="webgis.html" class="">WebGIS</a>
-      <a href="contact.html" class="">Contact</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html">Projects</a>
+      <a href="webgis.html">WebGIS</a>
+      <a href="contact.html">Contact</a>
     </div>
     <a href="contact.html" class="nav-cta">Get in Touch</a>
   </nav>
 
+  <!-- ═══ HERO ═══
+       📷 Replace 'hero-bg.jpg' with a personal photo or Nepal mountain landscape
+          Suggested: a photo of you with mountains, or Himalayan panorama from Solukhumbu
+          Recommended size: 1400 × 900 px, landscape orientation
+  -->
   <section class="home-hero">
     <div class="home-hero-content">
       <div class="home-eyebrow">
         <span class="home-eyebrow-bar"></span>
-        <span>Geomatics Engineering · Kathmandu University</span>
+        <span>Geomatics Engineering &middot; Kathmandu University &middot; 7th Semester</span>
       </div>
-      <h1>Sugam<br/><em>Dhungana</em></h1>
-      <div class="home-hero-role">GIS Analyst &nbsp;·&nbsp; WebGIS Developer &nbsp;·&nbsp; Spatial Data Engineer</div>
-      <p>Building maps that make sense of the world — from Himalayan terrain analysis to interactive web dashboards. Based in Nepal, trained at Sainik Awasiya Mahavidyalaya and Kathmandu University.</p>
+      <h1>Sugam<br/><em>K. Dhungana</em></h1>
+      <div class="home-hero-sub">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>From Solukhumbu</span> &nbsp;&middot;&nbsp;
+        <span>Based in Kathmandu</span> &nbsp;&middot;&nbsp;
+        <span>GIS &amp; WebGIS Developer</span>
+      </div>
+      <p>Mapping Nepal&rsquo;s terrain, culture, and environment — one spatial layer at a time.
+         Passionate about GIS, remote sensing, and building interactive web maps
+         that turn complex data into clear, actionable insights.</p>
       <div class="home-btns">
-        <a href="projects.html" class="btn-primary">View Projects &rarr;</a>
-        <a href="webgis.html" class="btn-outline">&#9679; Live WebGIS Demo</a>
-        <a href="contact.html" class="btn-outline">Contact Me</a>
+        <a href="projects.html" class="btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+        <a href="webgis.html"   class="btn-outline"><i class="fas fa-map"></i> Live WebGIS Demo</a>
+        <a href="contact.html"  class="btn-outline"><i class="fas fa-envelope"></i> Contact</a>
       </div>
+    </div>
+
+    <!-- Social strip inside hero -->
+    <div class="hero-social-strip">
+      <span class="strip-label">Find me on</span>
+      <a href="https://github.com/maestro1911" target="blank" class="soc-btn github"    title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/sugam-dhungana" target="blank" class="soc-btn linkedin"  title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/maestro_191/" target="blank" class="soc-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/sugamspace" target="blank" class="soc-btn facebook"  title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.researchgate.net/profile/Sugam-Dhungana" target="blank" class="soc-btn rgate"     title="ResearchGate"><i class="fab fa-researchgate"></i></a>
     </div>
   </section>
 
+  <!-- Stats -->
   <div class="home-stats">
-    <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Years of GIS</div></div>
-    <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Projects</div></div>
-    <div class="stat-item"><div class="stat-num">50</div><div class="stat-label">Destinations Mapped</div></div>
-    <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">UNESCO Sites Studied</div></div>
+    <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Years at KU</div></div>
+    <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Projects Done</div></div>
+    <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">GIS Tools</div></div>
+    <div class="stat-item"><div class="stat-num">7th</div><div class="stat-label">Semester</div></div>
   </div>
 
+  <!-- Feature cards -->
   <div style="position:relative;z-index:1;padding:4rem 3rem;background:var(--bg-0)">
-    <div class="container">
-      <div class="section-label">What I do</div>
-      <h2 class="section-title">Spatial Technology for Real Problems</h2>
-      <div class="home-cards" style="margin-top:2.5rem">
-        <div class="home-card">
-          <div class="home-card-icon">🗺</div>
-          <h3>GIS &amp; Cartography</h3>
-          <p>From field surveys to polished maps — I work with QGIS, ArcGIS, and Google Earth Engine to analyse and visualise spatial data across Nepal.</p>
-          <a href="skills.html" class="home-card-link">Explore skills &rarr;</a>
-        </div>
-        <div class="home-card">
-          <div class="home-card-icon">🌐</div>
-          <h3>Web GIS Development</h3>
-          <p>Interactive dashboards powered by Leaflet.js and open geospatial standards — including this site's choropleth tourism explorer.</p>
-          <a href="webgis.html" class="home-card-link">Open dashboard &rarr;</a>
-        </div>
-        <div class="home-card">
-          <div class="home-card-icon">🛰</div>
-          <h3>Remote Sensing</h3>
-          <p>Land-use change detection, satellite imagery classification, and photogrammetric analysis using ERDAS Imagine, GEE, and Python.</p>
-          <a href="projects.html" class="home-card-link">See projects &rarr;</a>
+  <div class="container">
+
+    <div class="section-label">What I do</div>
+    <h2 class="section-title">Spatial Technology for Real Problems</h2>
+
+    <div class="home-cards" style="margin-top:2.5rem">
+
+      <!-- GIS CARD -->
+      <div class="home-card card-gis">
+        <div class="card-overlay">
+
+          <div class="home-card-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+
+          <h3>GIS and Cartography</h3>
+
+          <p>
+            Field surveys to polished suitability maps — I work with
+            QGIS, ArcGIS Pro, and ArcGIS to analyse and visualise
+            spatial data across Nepal's diverse terrain.
+          </p>
+
+          <a href="skills.html" class="home-card-link">
+            Explore Skills <i class="fas fa-arrow-right"></i>
+          </a>
+
         </div>
       </div>
+
+      <!-- WEBGIS CARD -->
+      <div class="home-card card-webgis">
+        <div class="card-overlay">
+
+          <div class="home-card-icon">
+            <i class="fas fa-globe-asia"></i>
+          </div>
+
+          <h3>Web GIS Development</h3>
+
+          <p>
+            Interactive dashboards with Leaflet.js and open
+            geospatial standards including this Nepal Tourism
+            Explorer built completely from scratch.
+          </p>
+
+          <a href="webgis.html" class="home-card-link">
+            Open Dashboard <i class="fas fa-arrow-right"></i>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- REMOTE SENSING CARD -->
+      <div class="home-card card-rs">
+        <div class="card-overlay">
+
+          <div class="home-card-icon">
+            <i class="fas fa-satellite"></i>
+          </div>
+
+          <h3>Remote Sensing</h3>
+
+          <p>
+            LULC change detection, satellite image classification
+            and thematic mapping using Google Earth Engine,
+            ERDAS Imagine and Python geospatial libraries.
+          </p>
+
+          <a href="projects.html" class="home-card-link">
+            See Projects <i class="fas fa-arrow-right"></i>
+          </a>
+
+        </div>
+      </div>
+
     </div>
+
   </div>
+</div>
 
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand-name">Sugam <span>Dhungana</span></div>
-          <p class="footer-brand-desc">Geomatics Engineering student at Kathmandu University. Passionate about spatial data, cartography, and building web GIS solutions for Nepal.</p>
+          <div class="footer-brand-name">Sugam <span>K. Dhungana</span></div>
+          <p class="footer-brand-desc">Geomatics Engineering Student &middot; 7th Semester &middot; Kathmandu University &middot; Originally from Solukhumbu, Nepal.</p>
+          <div class="footer-social" style="margin-top:1rem">
+            <a href="https://github.com/maestro1911" target="_blank" class="footer-soc" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sugam-dhungana" target="_blank" class="footer-soc" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/maestro_191/" target="_blank" class="footer-soc" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/sugamspace" target="_blank" class="footer-soc" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.researchgate.net/profile/Sugam-Dhungana" target="_blank" class="footer-soc" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+           
+          </div>
         </div>
         <div>
-          <div class="footer-col-title">Pages</div>
+          <div class="footer-col-title">Navigate</div>
           <ul class="footer-col-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="education.html">Education</a></li>
+            <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-layer-group"></i> Skills</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
           </ul>
         </div>
         <div>
           <div class="footer-col-title">Work</div>
           <ul class="footer-col-links">
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="webgis.html">WebGIS Demo</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a></li>
+            <li><a href="webgis.html"><i class="fas fa-map"></i> WebGIS Demo</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
           </ul>
         </div>
         <div>
-          <div class="footer-col-title">Contact</div>
+          <div class="footer-col-title">Find Me</div>
           <ul class="footer-col-links">
-            <li><a href="mailto:sugam@ku.edu.np">sd03235722@student.ku.edu.np</a></li>
-            <li><a href="https://github.com/maestro1911" target="_blank">github.com/maestro1911</a></li>
-            <li><a href="https://maps.google.com/?q=Kathmandu,+Nepal" target="_blank">Kathmandu, Nepal</a></li>
+            <li><a href="mailto:sugam.dhungana@student.ku.edu.np"><i class="fas fa-envelope"></i> Email</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</a></li>
+            <li><a href="#"><i class="fas fa-mountain"></i> From Solukhumbu</a></li>
+            <li><a href="https://ku.edu.np" target="_blank" rel="noopener"><i class="fas fa-university"></i> KU Dhulikhel</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="footer-copy">&copy; 2025 Sugam Dhungana &middot; Kathmandu University</span>
+        <span class="footer-copy">&copy; 2025 Sugam K. Dhungana &middot; BE Geomatics, Kathmandu University</span>
         <span class="footer-files">TO3.css &middot; TO3.js &middot; TO3.geojson</span>
       </div>
     </div>

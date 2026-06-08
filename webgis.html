@@ -3,109 +3,107 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WebGIS — Sugam | Nepal Tourism Explorer</title>
+  <title>WebGIS Dashboard — Sugam K. Dhungana | Geomatics Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="TO3.css"/>
+  
 </head>
 <body class="webgis-body">
-
   <nav class="nav">
-    <a href="index.html" class="nav-logo">Sugam <span>[Surname]</span></a>
+    <a href="index.html" class="nav-logo">Sugam <span>K. Dhungana</span></a>
     <div class="nav-links">
-      <a href="index.html" class="">Home</a>
-      <a href="about.html" class="">About</a>
-      <a href="skills.html" class="">Skills</a>
-      <a href="education.html" class="">Education</a>
-      <a href="projects.html" class="">Projects</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html">Projects</a>
       <a href="webgis.html" class="active">WebGIS</a>
-      <a href="contact.html" class="">Contact</a>
+      <a href="contact.html">Contact</a>
     </div>
     <a href="contact.html" class="nav-cta">Get in Touch</a>
   </nav>
 
   <div class="wg-page-wrap">
-
-    <!-- Thin label bar -->
     <div class="wg-topbar">
-      <span class="mono">Part B &mdash; Featured WebGIS Project &middot; TO3.js &middot; Leaflet.js v1.9.4</span>
-      <span class="wg-topbar-title">Nepal Tourism Explorer &mdash; Choropleth Radius Search</span>
-      <span class="mono">GeoJSON: TO3.geojson &middot; OSM Tiles &middot; EPSG:4326</span>
+      <span class="mono"><i class="fas fa-code" style="color:var(--ochre);margin-right:.4rem"></i>Part B &mdash; WebGIS &middot; TO3.js &middot; Leaflet.js v1.9.4 &middot; OSM Tiles</span>
+      <span class="wg-topbar-title">Nepal Tourism Explorer &mdash; Choropleth &amp; Radius Search Dashboard</span>
+      <span class="mono">Sugam K. Dhungana &middot; KU Geomatics &middot; EPSG:4326</span>
     </div>
 
     <div class="wg-layout">
 
-      <!-- ── LEFT CONTROL PANEL ── -->
       <aside class="side-panel" id="side-panel">
-
         <div class="sp-brand">
-          <div class="sp-brand-tag mono">TO3 &middot; WebGIS Dashboard</div>
+          <div class="sp-brand-tag mono">TO3 &middot; WebGIS Assignment</div>
           <h2 class="sp-brand-title">Nepal Tourism<br/>Explorer</h2>
-          <p class="sp-brand-sub">Radius search &middot; Choropleth by visitor density</p>
+          <p class="sp-brand-sub">Choropleth radius search &middot; 50 destinations &middot; 8 categories</p>
         </div>
 
-        <!-- STEP 1 — Location -->
         <div class="sp-block">
-          <div class="sp-step-num">01</div>
-          <h3 class="sp-block-title">Set Search Centre</h3>
-          <button class="sp-btn geolocate" id="btn-geolocate">&#8853;&nbsp; Use My Location</button>
+          <div class="sp-step-num">01 &mdash; SET LOCATION</div>
+          <h3 class="sp-block-title"><i class="fas fa-location-dot" style="color:var(--ochre);font-size:.85rem"></i> Search Centre</h3>
+          <button class="sp-btn geolocate" id="btn-geolocate"><i class="fas fa-crosshairs"></i> &nbsp;Use My Location</button>
           <p class="sp-hint">&mdash; or click anywhere on the map &mdash;</p>
           <div class="sp-loc-display" id="loc-display" style="display:none">
-            <span class="sp-loc-icon">&#9678;</span>
+            <span class="sp-loc-icon"><i class="fas fa-circle-dot"></i></span>
             <span id="loc-text" class="mono"></span>
           </div>
         </div>
 
-        <!-- STEP 2 — Radius -->
         <div class="sp-block">
-          <div class="sp-step-num">02</div>
-          <h3 class="sp-block-title">Search Radius &nbsp;<span class="sp-radius-live" id="radius-live">100 km</span></h3>
+          <div class="sp-step-num">02 &mdash; SET RADIUS</div>
+          <h3 class="sp-block-title">
+            <i class="fas fa-circle-notch" style="color:var(--ochre);font-size:.85rem"></i>
+            Radius &nbsp;<span class="sp-radius-live" id="radius-live">100 km</span>
+          </h3>
           <input type="range" id="radius-range" min="10" max="500" value="100" step="10" class="sp-range"/>
           <div class="sp-range-labels"><span>10 km</span><span>250 km</span><span>500 km</span></div>
-          <button class="sp-btn search" id="btn-search" disabled>&#9677;&nbsp; Search Destinations</button>
+          <button class="sp-btn search" id="btn-search" disabled>
+            <i class="fas fa-search"></i> &nbsp;Search Destinations
+          </button>
         </div>
 
-        <!-- STEP 3 — Results -->
         <div class="sp-block sp-results-block" id="sp-results-block" style="display:none">
-          <div class="sp-step-num">03</div>
-          <h3 class="sp-block-title"><span id="result-total">0</span> Destinations Found</h3>
-
+          <div class="sp-step-num">03 &mdash; RESULTS</div>
+          <h3 class="sp-block-title">
+            <i class="fas fa-map-pin" style="color:var(--ochre);font-size:.85rem"></i>
+            <span id="result-total">0</span> Destinations Found
+          </h3>
           <div class="sp-filter-wrap">
-            <label class="sp-filter-label">Filter by Category</label>
+            <label class="sp-filter-label"><i class="fas fa-filter"></i> Filter by Category</label>
             <div class="sp-select-box">
               <select id="cat-select" class="sp-select">
                 <option value="all">&#10022; All Categories</option>
-                <option value="heritage">&#127963;&nbsp; Heritage</option>
-                <option value="religion">&#128509;&nbsp; Religion</option>
-                <option value="trekking">&#129406;&nbsp; Trekking</option>
-                <option value="wildlife">&#129415;&nbsp; Wildlife</option>
-                <option value="adventure">&#129682;&nbsp; Adventure</option>
-                <option value="viewpoint">&#128301;&nbsp; Viewpoint</option>
-                <option value="nature">&#127966;&nbsp; Nature</option>
-                <option value="cultural">&#127917;&nbsp; Cultural</option>
+                <option value="heritage">&#127963; Heritage</option>
+                <option value="religion">&#128509; Religion</option>
+                <option value="trekking">&#129406; Trekking</option>
+                <option value="wildlife">&#129415; Wildlife</option>
+                <option value="adventure">&#129682; Adventure</option>
+                <option value="viewpoint">&#128301; Viewpoint</option>
+                <option value="nature">&#127966; Nature</option>
+                <option value="cultural">&#127917; Cultural</option>
               </select>
-              <span class="sp-select-arrow">&#9662;</span>
+              <span class="sp-select-arrow"><i class="fas fa-chevron-down"></i></span>
             </div>
             <p class="sp-filter-count" id="filter-count"></p>
           </div>
-
           <div class="sp-dest-list" id="sp-dest-list"></div>
         </div>
 
-        <!-- Note -->
         <div class="sp-note">
-          <span class="sp-note-label">GeoJSON Preprocessing</span>
-          TO3.geojson &mdash; 50 tourist destination points. Validated using QGIS Check Validity (GEOS engine). Choropleth attribute: annual_visitors. CRS: WGS 84 (EPSG:4326).
+          <span class="sp-note-label"><i class="fas fa-info-circle"></i> GeoJSON Preprocessing</span>
+          <strong>TO3.geojson</strong> &mdash; 50 tourist destination Points, validated using QGIS
+          Check Validity (GEOS engine). Choropleth attribute: <code>annual_visitors</code>.
+          CRS: WGS&nbsp;84 (EPSG:4326). Prepared by Sugam K. Dhungana, KU Geomatics.
         </div>
-
       </aside>
 
-      <!-- ── MAP ── -->
       <div id="map"></div>
-
-    </div><!-- .wg-layout -->
-  </div><!-- .wg-page-wrap -->
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="TO3.js"></script>

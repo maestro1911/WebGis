@@ -3,31 +3,45 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects — Sugam | Geomatics Portfolio</title>
+  <title>Projects — Sugam K. Dhungana | Geomatics Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="TO3.css"/>
+  <script>
+  function filterProjects(cat, btn) {
+    document.querySelectorAll('.proj-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    var count = 0;
+    document.querySelectorAll('.proj-card').forEach(function(card) {
+      var show = cat === 'all' || card.dataset.cat === cat;
+      card.style.display = show ? '' : 'none';
+      if (show) count++;
+    });
+    document.getElementById('proj-count').textContent = count + ' project' + (count !== 1 ? 's' : '');
+  }
+</script>
 </head>
 <body>
   <nav class="nav">
-    <a href="index.html" class="nav-logo">Sugam <span>Dhungana</span></a>
+    <a href="index.html" class="nav-logo">Sugam <span>K. Dhungana</span></a>
     <div class="nav-links">
-      <a href="index.html" class="">Home</a>
-      <a href="about.html" class="">About</a>
-      <a href="skills.html" class="">Skills</a>
-      <a href="education.html" class="">Education</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
       <a href="projects.html" class="active">Projects</a>
-      <a href="webgis.html" class="">WebGIS</a>
-      <a href="contact.html" class="">Contact</a>
+      <a href="webgis.html">WebGIS</a>
+      <a href="contact.html">Contact</a>
     </div>
     <a href="contact.html" class="nav-cta">Get in Touch</a>
   </nav>
 
   <div class="page-banner">
-    <div class="page-banner-label">04 / Projects</div>
+    <div class="page-banner-label">04 &middot; Projects</div>
     <h1>Projects</h1>
-    <p>Field surveys, remote sensing analyses, spatial databases, and interactive web maps.</p>
+    <p>Field surveys, remote sensing analyses, spatial databases, thematic cartography, and interactive web maps.</p>
   </div>
 
   <div class="page-content">
@@ -35,35 +49,45 @@
 
       <div class="section-label">Portfolio</div>
       <h2 class="section-title">Featured Work</h2>
+      <p class="section-sub" style="margin-bottom:2rem">
+        Real academic and personal projects completed at Kathmandu University, Department of Geomatics Engineering.
+      </p>
 
-      <!-- Filter buttons -->
-      <div class="proj-filter" style="margin-top:1.5rem">
-        <button class="proj-filter-btn active" onclick="filterProjects('all',this)">All</button>
-        <button class="proj-filter-btn" onclick="filterProjects('webgis',this)">WebGIS</button>
-        <button class="proj-filter-btn" onclick="filterProjects('remote-sensing',this)">Remote Sensing</button>
-        <button class="proj-filter-btn" onclick="filterProjects('survey',this)">Survey</button>
-        <button class="proj-filter-btn" onclick="filterProjects('database',this)">Database</button>
+      <!-- Filter -->
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;margin-bottom:2rem">
+        <div class="proj-filter" style="margin-bottom:0">
+          <button class="proj-filter-btn active" onclick="filterProjects('all',this)">All</button>
+          <button class="proj-filter-btn" onclick="filterProjects('webgis',this)">WebGIS</button>
+          <button class="proj-filter-btn" onclick="filterProjects('remote-sensing',this)">Remote Sensing</button>
+          <button class="proj-filter-btn" onclick="filterProjects('survey',this)">Survey</button>
+          <button class="proj-filter-btn" onclick="filterProjects('cartography',this)">Cartography</button>
+          <button class="proj-filter-btn" onclick="filterProjects('database',this)">Database</button>
+        </div>
+        <span class="mono" id="proj-count">6 projects</span>
       </div>
 
-      <div class="proj-grid" style="margin-top:0" id="proj-grid">
+      <div class="proj-grid">
 
-        <!-- Featured project -->
+        <!-- ① FEATURED — Nepal Tourism WebGIS Dashboard (TO3) -->
+        <!-- 📷 Replace 'project-webgis.jpg' with a screenshot of your WebGIS map dashboard (1200×600 px) -->
         <div class="proj-card proj-featured" data-cat="webgis">
+          <div class="proj-ribbon">Featured</div>
           <div class="proj-img-wrap">
-            <img src="skd.jpeg" alt="Nepal Tourism WebGIS Dashboard"/>
+            <img src="skd.jpeg" alt="Nepal Tourism WebGIS Dashboard"
+                 onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-map\'></i><span>Replace with<br/>project-webgis.jpg<br/>(Screenshot of your WebGIS map)</span></div>'"/>
             <div class="proj-img-overlay">
               <div class="proj-tags">
-                <span class="proj-tag">Leaflet.js</span>
-                <span class="proj-tag">GeoJSON</span>
-                <span class="proj-tag">Choropleth</span>
-                <span class="proj-tag">Geolocation API</span>
+                <span class="proj-tag">Leaflet.js</span><span class="proj-tag">GeoJSON</span>
+                <span class="proj-tag">Choropleth</span><span class="proj-tag">Geolocation API</span>
+                <span class="proj-tag">OSM Tiles</span>
               </div>
             </div>
           </div>
-                  <div class="proj-body">
-                    <div class="proj-category">WebGIS &mdash; Featured</div>
-                    <h2 class="proj-title">Mapping the Environment with Engineering Solutions.</h2>
-                    <p class="proj-desc">Welcome to my portfolio! I specialize in geomatics engineering and spatial analysis, turning raw geographic data into 
+          <div class="proj-body">
+            <div class="proj-cat"><i class="fas fa-map"></i> &nbsp;WebGIS &mdash; Individual Project &mdash; 2025</div>
+            <h3 class="proj-title">Mapping the Environment with Engineering Solutions. &mdash; My Engineering Portfolio</h3>
+            <p class="proj-desc">
+              Welcome to my portfolio! I specialize in geomatics engineering and spatial analysis, turning raw geographic data into 
                                         actionable insights.My project work covers the full spectrum of geospatial technologies, including:
                           <b>Remote Sensing & Earth Observation</b> (Google Earth Engine, Landsat)<br> 
                           <b>Precision Surveying & Topographic Mapping</b> (DGPS, AutoCAD Civil 3D)<br> 
@@ -71,124 +95,203 @@
                           <b>GIS & Hydrological Analysis</b> (ArcGIS Pro, SRTM DEMs)<br> 
                           <b>UAV Photogrammetry</b> (Agisoft Metashape, Orthophoto generation)<br> 
                           Explore the case studies below to see how I apply spatial SQL, photogrammetry, and terrain analysis to projects across the Kathmandu Valley and beyond.</p>
-                                      <div class="proj-links">
-                      <a href="webgis.html" class="proj-link">&#9679; Live Demo &rarr;</a>
-                      <a href="#" class="proj-link">&#9651; GitHub</a>
-                    </div>
-                  </div> 
-                </div>
-
-        <!-- Project 2 -->
-        <div class="proj-card" data-cat="remote-sensing">
-          <div class="proj-img-wrap">
-            <img src="ktm.jpeg" alt="LULC Change Detection"/>
-            <div class="proj-img-overlay">
-              <div class="proj-tags">
-                <span class="proj-tag">Google Earth Engine</span>
-                <span class="proj-tag">Landsat 8</span>
-                <span class="proj-tag">QGIS</span>
-              </div>
+            </p>
+            <div class="proj-meta">
+              <span class="proj-meta-tag"><i class="fas fa-user"></i> Individual</span>
+              <span class="proj-meta-tag"><i class="fas fa-calendar"></i> 2025</span>
+              <span class="proj-meta-tag"><i class="fas fa-university"></i> KU WebGIS Course</span>
+              <span class="proj-meta-tag">50 Destinations</span>
+              <span class="proj-meta-tag">8 Categories</span>
             </div>
-          </div>
-          <div class="proj-body">
-            <div class="proj-category">Remote Sensing</div>
-            <h3 class="proj-title">LULC Change Detection — Kathmandu Valley</h3>
-            <p class="proj-desc">Multi-temporal Land Use / Land Cover change analysis of the Kathmandu Valley from 2010 to 2024 using Landsat 8 OLI/TIRS imagery. Supervised Maximum Likelihood Classification via Google Earth Engine. Overall accuracy 87.4%, Kappa coefficient 0.82. Reveals rapid urban expansion at the expense of agricultural land.</p>
             <div class="proj-links">
-              <a href="#" class="proj-link">&#9651; GitHub</a>
-              <a href="#" class="proj-link">&#128196; Report</a>
+              <a href="webgis.html" class="proj-link"><i class="fas fa-play-circle"></i> Live Demo</a>
+              <a href="#" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+              <a href="TO3.geojson" class="proj-link"><i class="fas fa-file-code"></i> GeoJSON</a>
             </div>
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="proj-card" data-cat="survey">
+        <!-- ② Land Suitability Assessment — Cardamom (Group Project) -->
+        <!-- 📷 Replace 'project-cardamom.jpg' with the suitability map image from your report (600×380 px) -->
+        <div class="proj-card" data-cat="remote-sensing">
           <div class="proj-img-wrap">
-            <img src="topo.jpg" alt="GPS Field Survey"/>
+            <img src="sdd.webp" alt="Land Suitability Assessment Lamjung"
+                 onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-seedling\'></i><span>Replace with<br/>project-cardamom.jpg<br/>(Suitability map from report)</span></div>'"/>
             <div class="proj-img-overlay">
               <div class="proj-tags">
-                <span class="proj-tag">DGPS</span>
-                <span class="proj-tag">Total Station</span>
+                <span class="proj-tag">ArcGIS Pro</span>
+                <span class="proj-tag">GIS</span>
+                <span class="proj-tag">GEOM-314</span>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cat"><i class="fas fa-leaf"></i> &nbsp;GIS &amp; MCDM &mdash; Group Project (GEOM-314) &mdash; 2025</div>
+            <h3 class="proj-title">Land Suitability Assessment for Large Cardamom Production &mdash; Lamjung District</h3>
+            <p class="proj-desc">
+              Evaluated land suitability for large cardamom (<em>Amomum subulatum</em>) cultivation across
+              Lamjung District using GIS integrated with the Analytic Hierarchy Process (AHP). Nine criteria
+              were analysed: elevation, slope, aspect, LULC, temperature, humidity, precipitation, soil pH
+              and soil texture. Results: <strong>0.61% highly suitable</strong>, 80.37% moderately suitable,
+              13.74% marginally suitable, 5.27% not suitable / restricted. Soil texture (22.34%) was the
+              highest-weighted factor. Validated against 5 known cardamom-cultivation localities.
+              <strong>Supervised by Er.&nbsp;Anish Bhandari &amp; Er.&nbsp;Namuna Nyaupane.</strong>
+            </p>
+            <div class="proj-meta">
+              <span class="proj-meta-tag"><i class="fas fa-users"></i> Group of 4</span>
+              <span class="proj-meta-tag"><i class="fas fa-calendar"></i> July 2025</span>
+              <span class="proj-meta-tag">GEOM-314</span>
+              <span class="proj-meta-tag">Lamjung District</span>
+              <span class="proj-meta-tag">AHP and MCDM</span>
+            </div>
+            
+            <div class="proj-links">
+              <a href="grp8_final_defense_report.pdf" class="proj-link" target="_blank"><i class="fas fa-file-pdf"></i> Full Report</a>
+              <a href="#" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ③ Thematic Maps Report -->
+        <!-- 📷 Replace 'project-thematic.jpg' with a collage or one of your thematic maps (600×380 px) -->
+        <div class="proj-card" data-cat="cartography">
+          <div class="proj-img-wrap">
+            <img src="thematic.jpeg" alt="Thematic Maps Report"
+                 onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-layer-group\'></i><span>Replace with<br/>project-thematic.jpg<br/>(One of your 5 thematic maps)</span></div>'"/>
+            <div class="proj-img-overlay">
+              <div class="proj-tags">
+                <span class="proj-tag">QGIS</span><span class="proj-tag">ArcGIS</span>
+                <span class="proj-tag">Choropleth</span><span class="proj-tag">Heat Map</span>
+                
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cat"><i class="fas fa-map-signs"></i> &nbsp;Thematic Cartography &mdash; Individual Project &mdash; 2024</div>
+            <h3 class="proj-title">Creating Different Types of Thematic Maps &mdash; Nepal</h3>
+            <p class="proj-desc">
+              Prepared and interpreted five distinct thematic maps of Nepal using GIS:
+              (1)&nbsp;<strong>Heat map</strong> of mean temperature, (2)&nbsp;<strong>Isotherm map</strong>
+              with contour lines, (3)&nbsp;<strong>Dot density map</strong> of COVID-19 death counts by district,
+              (4)&nbsp;<strong>Choropleth map</strong> of Kathmandu District population by local administrative
+              units, and (5)&nbsp;<strong>Graduated symbol map</strong> of coffee production by district.
+              Submitted to Er.&nbsp;Sujan Subedi, Department of Geomatics, KU.
+            </p>
+            <div class="proj-meta">
+              <span class="proj-meta-tag"><i class="fas fa-user"></i> Individual</span>
+              <span class="proj-meta-tag"><i class="fas fa-calendar"></i> Dec 2024</span>
+              <span class="proj-meta-tag">5 Map Types</span>
+              <span class="proj-meta-tag">QGIS &amp; ArcGIS</span>
+            </div>
+            <div class="proj-links">
+              <a href="Thematic_Maps_Report_Sugam_Dhungana.pdf" class="proj-link" target="_blank"><i class="fas fa-file-pdf"></i> Full Report</a>
+              <a href="#" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ④ GPS Field Survey -->
+        <!-- 📷 Replace 'project-gps.jpg' with a photo of you doing GPS survey or the produced topo map (600×380 px) -->
+        <div class="proj-card" data-cat="survey">
+          <div class="proj-img-wrap">
+            <img src="topo.jpg" alt="GPS Field Survey"
+                 onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-crosshairs\'></i><span>Replace with<br/>project-gps.jpg<br/>(Field survey or topo map photo)</span></div>'"/>
+            <div class="proj-img-overlay">
+              <div class="proj-tags">
+                <span class="proj-tag">DGPS</span><span class="proj-tag">Total Station</span>
                 <span class="proj-tag">AutoCAD Civil 3D</span>
               </div>
             </div>
           </div>
           <div class="proj-body">
-            <div class="proj-category">Engineering Survey</div>
-            <h3 class="proj-title">GPS Field Survey &amp; Topographic Mapping — KU Campus</h3>
-            <p class="proj-desc">Conducted a differential GPS survey and total-station traverse across the Kathmandu University campus area. Produced a 1:1,000 scale topographic map with 0.5 m contour intervals and computed land parcel areas using coordinate geometry. Map output delivered in both AutoCAD DWG and GeoTIFF formats.</p>
+            <div class="proj-cat"><i class="fas fa-compass"></i> &nbsp;Engineering Survey &mdash; 2024</div>
+            <h3 class="proj-title">GPS Field Survey and Topographic Mapping &mdash; KU Campus</h3>
+            <p class="proj-desc">
+              Conducted a differential GPS (DGPS) survey and total-station traverse across the Kathmandu
+              University campus area. Produced a 1:1,000 scale topographic map with 0.5 m contour
+              intervals. Computed land parcel areas using coordinate geometry. Map output delivered
+              in AutoCAD DWG and GeoTIFF formats.
+            </p>
+            <div class="proj-meta">
+              <span class="proj-meta-tag"><i class="fas fa-calendar"></i> 2024</span>
+              <span class="proj-meta-tag">1:1,000 Scale</span>
+              <span class="proj-meta-tag">AutoCAD Civil 3D</span>
+              
+            </div>
             <div class="proj-links">
-              <a href="#" class="proj-link">&#128196; Report</a>
-              <a href="#" class="proj-link">&#128247; Field Photos</a>
+              <a href="#" class="proj-link"><i class="fas fa-file-pdf"></i> Report</a>
+              <a href="#" class="proj-link"><i class="fas fa-images"></i> Field Photos</a>
             </div>
           </div>
         </div>
 
-        <!-- Project 4 -->
-        <div class="proj-card" data-cat="database">
-          <div class="proj-img-wrap">
-            <img src="sdd.jpg" alt="Spatial Database"/>
-            <div class="proj-img-overlay">
-              <div class="proj-tags">
-                <span class="proj-tag">PostgreSQL</span>
-                <span class="proj-tag">PostGIS</span>
-                <span class="proj-tag">Spatial SQL</span>
-              </div>
-            </div>
-          </div>
-          <div class="proj-body">
-            <div class="proj-category">Spatial Database</div>
-            <h3 class="proj-title">Spatial Database Design — Urban Land Parcels</h3>
-            <p class="proj-desc">Designed a fully relational spatial database schema for urban land parcels using PostgreSQL with PostGIS extension. Implemented complex spatial SQL queries including ST_Intersection, ST_Buffer, ST_Area, and ST_Within. Results visualised in QGIS via DB Manager plugin with dynamic symbology.</p>
-            <div class="proj-links">
-              <a href="#" class="proj-link">&#9651; GitHub</a>
-              <a href="#" class="proj-link">&#128196; Schema Docs</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
+        <!-- ⑤ DEM Analysis -->
+        <!-- 📷 Replace 'project-dem.jpg' with a screenshot of your DEM/terrain analysis map (600×380 px) -->
         <div class="proj-card" data-cat="remote-sensing">
           <div class="proj-img-wrap">
-            <img src="dem.jpeg" alt="DEM Analysis"/>
+            <img src="Dem.jpeg" alt="DEM Terrain Analysis"
+                 onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-mountain\'></i><span>Replace with<br/>project-dem.jpg<br/>(DEM or terrain analysis map)</span></div>'"/>
             <div class="proj-img-overlay">
               <div class="proj-tags">
-                <span class="proj-tag">SRTM DEM</span>
-                <span class="proj-tag">ArcGIS Pro</span>
-                <span class="proj-tag">Hydrological Analysis</span>
+                <span class="proj-tag">SRTM DEM</span><span class="proj-tag">ArcGIS Pro</span>
+                <span class="proj-tag">Spatial Analyst</span>
               </div>
             </div>
           </div>
           <div class="proj-body">
-            <div class="proj-category">Terrain Analysis</div>
-            <h3 class="proj-title">DEM-Based Terrain &amp; Hydrological Analysis</h3>
-            <p class="proj-desc">Used SRTM 30 m Digital Elevation Model data to derive slope, aspect, hillshade and watershed boundaries for the Bagmati River basin. Performed flow accumulation and stream network extraction using ArcGIS Pro Spatial Analyst. Outputs used for flood-risk zone delineation mapping.</p>
+            <div class="proj-cat"><i class="fas fa-mountain"></i> &nbsp;Terrain Analysis &mdash; 2024</div>
+            <h3 class="proj-title">DEM-Based Terrain and Hydrological Analysis &mdash; Bagmati Basin</h3>
+            <p class="proj-desc">
+              Used SRTM 30 m Digital Elevation Model data to derive slope, aspect, hillshade and
+              watershed boundaries for the Bagmati River basin. Performed flow accumulation and
+              stream network extraction using ArcGIS Pro Spatial Analyst. Outputs used for
+              flood-risk zone delineation mapping.
+            </p>
+            <div class="proj-meta">
+              <span class="proj-meta-tag"><i class="fas fa-calendar"></i> 2024</span>
+              <span class="proj-meta-tag">SRTM 30 m</span>
+              <span class="proj-meta-tag">Bagmati Basin</span>
+            </div>
             <div class="proj-links">
-              <a href="#" class="proj-link">&#9651; GitHub</a>
-              <a href="#" class="proj-link">&#128196; Report</a>
+              <a href="#" class="proj-link"><i class="fas fa-file-pdf"></i> Report</a>
+              <a href="#" class="proj-link"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
         </div>
 
-        <!-- Project 6 -->
+        <!-- ⑥ Drone Photogrammetry -->
+        <!-- 📷 Replace 'project-drone.jpg' with a drone photo or orthophoto output (600×380 px) -->
         <div class="proj-card" data-cat="survey">
           <div class="proj-img-wrap">
-            <img src="ortho.webp" alt="Drone Photogrammetry"/>
+            <img src="ortho.webp" alt="Drone Photogrammetry"
+                 onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-drone\'></i><span>Replace with<br/>project-drone.jpg<br/>(Drone photo or orthophoto output)</span></div>'"/>
             <div class="proj-img-overlay">
               <div class="proj-tags">
                 <span class="proj-tag">Agisoft Metashape</span>
-                <span class="proj-tag">Drone</span>
+                <span class="proj-tag">DJI Drone</span>
                 <span class="proj-tag">Orthophoto</span>
+                
               </div>
             </div>
           </div>
           <div class="proj-body">
-            <div class="proj-category">Photogrammetry</div>
-            <h3 class="proj-title">Drone-Based Orthophoto &amp; Point Cloud Production</h3>
-            <p class="proj-desc">Planned and executed a UAV photogrammetric survey flight over the KU campus. Processed imagery in Agisoft Metashape to generate a high-resolution orthophoto (GSD 3 cm), dense point cloud, and 3D mesh. Ground control points surveyed with DGPS for geometric accuracy assessment.</p>
+            <div class="proj-cat"><i class="fas fa-drone"></i> &nbsp;Photogrammetry &mdash; 2024</div>
+            <h3 class="proj-title">Drone-Based Orthophoto and Point Cloud Production</h3>
+            <p class="proj-desc">
+              Planned and executed a UAV photogrammetric survey flight over the KU campus.
+              Processed imagery in Agisoft Metashape to generate a high-resolution orthophoto
+              (GSD 3 cm), dense point cloud, and 3D mesh. Ground control points surveyed
+              with DGPS for geometric accuracy assessment.
+            </p>
+            <div class="proj-meta">
+              <span class="proj-meta-tag"><i class="fas fa-calendar"></i> 2024</span>
+              <span class="proj-meta-tag">3 cm GSD</span>
+              <span class="proj-meta-tag">Dense Cloud</span>
+              <span class="proj-meta-tag">Pix4D</span>
+            </div>
             <div class="proj-links">
-              <a href="#" class="proj-link">&#128247; Flight Photos</a>
-              <a href="#" class="proj-link">&#128196; Report</a>
+              <a href="#" class="proj-link"><i class="fas fa-images"></i> Photos</a>
+              <a href="#" class="proj-link"><i class="fas fa-file-pdf"></i> Report</a>
             </div>
           </div>
         </div>
@@ -201,51 +304,48 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand-name">Sugam <span>Dhungana</span></div>
-          <p class="footer-brand-desc">Geomatics Engineering student at Kathmandu University. Passionate about spatial data, cartography, and web GIS solutions for Nepal.</p>
+          <div class="footer-brand-name">Sugam <span>K. Dhungana</span></div>
+          <p class="footer-brand-desc">Geomatics Engineering Student &middot; 7th Semester &middot; Kathmandu University &middot; Originally from Solukhumbu, Nepal.</p>
+          <div class="footer-social" style="margin-top:1rem">
+            <a href="#" class="footer-soc" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="footer-soc" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-soc" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-soc" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-soc" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+          </div>
         </div>
         <div>
-          <div class="footer-col-title">Pages</div>
+          <div class="footer-col-title">Navigate</div>
           <ul class="footer-col-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="education.html">Education</a></li>
+            <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="skills.html"><i class="fas fa-layer-group"></i> Skills</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
           </ul>
         </div>
         <div>
           <div class="footer-col-title">Work</div>
           <ul class="footer-col-links">
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="webgis.html">WebGIS Demo</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a></li>
+            <li><a href="webgis.html"><i class="fas fa-map"></i> WebGIS Demo</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
           </ul>
         </div>
         <div>
-          <div class="footer-col-title">Contact</div>
+          <div class="footer-col-title">Find Me</div>
           <ul class="footer-col-links">
-            <li><a href="mailto:sugam@ku.edu.np">sd03235722student.ku.edu.np</a></li>
-            <li><a href="#">github.com/maestro1911</a></li>
-            <li><a href="#">Kathmandu, Nepal</a></li>
+            <li><a href="mailto:sugam.dhungana@student.ku.edu.np"><i class="fas fa-envelope"></i> Email</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</a></li>
+            <li><a href="#"><i class="fas fa-mountain"></i> From Solukhumbu</a></li>
+            <li><a href="https://ku.edu.np" target="_blank"><i class="fas fa-university"></i> KU Dhulikhel</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="footer-copy">&copy; 2025 Sugam Dhungana &middot; Kathmandu University</span>
+        <span class="footer-copy">&copy; 2025 Sugam K. Dhungana &middot; BE Geomatics, Kathmandu University</span>
         <span class="footer-files">TO3.css &middot; TO3.js &middot; TO3.geojson</span>
       </div>
     </div>
   </footer>
-
-  <script>
-  function filterProjects(cat, btn) {
-    document.querySelectorAll('.proj-filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.proj-card').forEach(card => {
-      var show = cat === 'all' || card.dataset.cat === cat;
-      card.style.display = show ? '' : 'none';
-    });
-  }
-  </script>
 </body>
 </html>
